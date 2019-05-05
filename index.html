@@ -11,12 +11,22 @@
 </head>
 
 <body>
+    <img src="img/default_logo.png" alt="Penderis shitty logo" class="move-right logo">
+  <section class="intro">
+    <h2>Whaleshares Wallet Viewer</h2>
+    <p> Type in the whaleshares account you wish to view without the "@" symbol.<br>
+      Yes I know I should filter but it is what it is right now.<br>    
+    The viewer will populate the table with all transfers according to most recent date. <br>
+  Transfers are grouped by the FROM field with a total column at the end.
+      <br>
+      Feel free to submit any issues or requests <a href="https://github.com/Penderis/whaleshares_projects/issues">here.</a> <br>
+</p>
 
-  <img src="img/default_logo.png" alt="Penderis shitty logo" class="move-right">
+  </section>
 
 	<div id="user-input">
 		<form>
-			<label for="account">Whaleshares Account - {{accountNameClean}} <br>
+		<label for="account"><h3>Whaleshares Account - {{accountNameClean}} </h3> <br>
   <input type="text" name="Account" v-model="accountName"></label>
     <button v-on:click.prevent="triggerButton" v-bind:disabled="enableFetch" value="penderis">Gimme!</button>
   
