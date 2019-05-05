@@ -8,6 +8,11 @@ body {
   display: none;
 }
 
+.move-right{
+  float:right;
+  display: inline-block;
+}
+
 .loading-fucker {
   display: inline-block;
   position: relative;
@@ -49,6 +54,7 @@ body {
 /* Tabulator v4.2.3 (c) Oliver Folkerd */
 .tableMain {
   margin-top:1em;
+  width:95vw;
 }
 .tabulator {
   position: relative;
