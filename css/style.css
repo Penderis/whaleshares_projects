@@ -4,6 +4,10 @@ body {
   color: #fff;
 }
 
+.hide-shit {
+  display: none;
+}
+
 .loading-fucker {
   display: inline-block;
   position: relative;
