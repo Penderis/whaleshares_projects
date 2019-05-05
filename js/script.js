@@ -62,7 +62,7 @@ function structureTableColumns(walletArray) {
       restructure.date = new Date(walletArray[counter][1].timestamp);
       //initiate sub array for secondary table
       restructure.transaction = [{
-        amount: parseInt(walletArray[counter][1].op[1].amount.replace(' WLS', '')),
+        amount: parseFloat(walletArray[counter][1].op[1].amount.replace(' WLS', '')),
         date: new Date(walletArray[counter][1].timestamp),
         memo: walletArray[counter][1].op[1].memo,
         chainIndex: walletArray[counter][0],
@@ -92,18 +92,18 @@ function structureTableColumns(walletArray) {
         existingObjectIndex = internalCounter;
       }
 
-      console.log("Internal Counter end ", internalCounter);
-      console.log("Existing object index inside loop: ", existingObjectIndex)
+      //console.log("Internal Counter end ", internalCounter);
+      //console.log("Existing object index inside loop: ", existingObjectIndex)
       // console.log("tempWallet internal counter", tempWallet);
     }
 
 
-    console.log("Existing object index: ", existingObjectIndex)
+    //console.log("Existing object index: ", existingObjectIndex)
 
     //after counter
     if (existingObjectIndex === null) {
       //if it does not exist then create new entry
-      console.log("wallet array counter: ", walletArray[counter]);
+      //console.log("wallet array counter: ", walletArray[counter]);
       restructure.from = walletArray[counter][1].op[1].from;
       restructure.to = walletArray[counter][1].op[1].to;
       restructure.date = new Date(walletArray[counter][1].timestamp);
