@@ -72,8 +72,8 @@ function structureTableColumns(walletArray) {
       //push onto tempWallet as first index.
       tempWallet.push(restructure);
 
-      console.log("Initialized Restructure: ", restructure);
-      console.log("Initialized Temp Wallet: ", tempWallet);
+      // console.log("Initialized Restructure: ", restructure);
+      // console.log("Initialized Temp Wallet: ", tempWallet);
 
       //Exit out of loop and move on with the show
       console.log("exit main loop - initialize")
@@ -84,8 +84,8 @@ function structureTableColumns(walletArray) {
     //update object index
     for (internalCounter = 0; internalCounter < tempWallet.length; internalCounter++) {
       console.log("Internal counter: ", internalCounter);
-      console.log("internal Counter wallet length", tempWallet.length);
-      console.log("internal wallet check: ", tempWallet[internalCounter]);
+      // console.log("internal Counter wallet length", tempWallet.length);
+      // console.log("internal wallet check: ", tempWallet[internalCounter]);
       if (tempWallet[internalCounter].from === walletArray[counter][1].op[1].from && tempWallet[internalCounter].to === walletArray[counter][1].op[1].to) {
         //then the object already exists and we append more transactions
         //console.log("Object Exists", internalCounter)
