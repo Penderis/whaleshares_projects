@@ -72,7 +72,7 @@ function structureTableColumns(walletArray) {
       //push onto tempWallet as first index.
       tempWallet.push(restructure);
 
-      // console.log("Initialized Restructure: ", restructure);
+      console.log("Initialized Restructure: ", restructure);
       // console.log("Initialized Temp Wallet: ", tempWallet);
 
       //Exit out of loop and move on with the show
@@ -83,7 +83,7 @@ function structureTableColumns(walletArray) {
 
     //update object index
     for (internalCounter = 0; internalCounter < tempWallet.length; internalCounter++) {
-      console.log("Internal counter: ", internalCounter);
+      //console.log("Internal counter: ", internalCounter);
       // console.log("internal Counter wallet length", tempWallet.length);
       // console.log("internal wallet check: ", tempWallet[internalCounter]);
       if (tempWallet[internalCounter].from === walletArray[counter][1].op[1].from && tempWallet[internalCounter].to === walletArray[counter][1].op[1].to) {
@@ -109,7 +109,7 @@ function structureTableColumns(walletArray) {
       restructure.date = new Date(walletArray[counter][1].timestamp);
       //initiate sub array for secondary table
       restructure.transaction = [{
-        amount: parseInt(walletArray[counter][1].op[1].amount.replace(' WLS', '')),
+        amount: parseFloat(walletArray[counter][1].op[1].amount.replace(' WLS', '')),
         date: new Date(walletArray[counter][1].timestamp),
         memo: walletArray[counter][1].op[1].memo,
         chainIndex: walletArray[counter][0],
@@ -131,7 +131,7 @@ function structureTableColumns(walletArray) {
       }
       //push tranasaction onto child array for table
       tempWallet[existingObjectIndex].transaction.push({
-        amount: parseInt(walletArray[counter][1].op[1].amount.replace(' WLS', '')),
+        amount: parseFloat(walletArray[counter][1].op[1].amount.replace(' WLS', '')),
         date: new Date(walletArray[counter][1].timestamp),
         memo: walletArray[counter][1].op[1].memo,
         chainIndex: walletArray[counter][0],
