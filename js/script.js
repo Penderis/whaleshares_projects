@@ -5,7 +5,7 @@
 
 //Chain Options
 steem.api.setOptions({
-  url: "https://wls.kennybll.com"
+  url: "https://wls.kidw.space/"
 });
 steem.config.set("address_prefix", "WLS");
 steem.config.set(
