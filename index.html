@@ -8,6 +8,15 @@
   <link rel="icon" type="image/png" href="img/favicon.png"/>
   <link href="https://unpkg.com/tabulator-tables@4.2.3/dist/css/tabulator.min.css" rel="stylesheet" type="text/css" />
   <link href="css/style.css" rel="stylesheet" type="text/css" />
+	
+	 <!-- Load it up bitches -->
+    <script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/7.0.0/pouchdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.2.3/js/tabulator.min.js"></script>
+    <script src="script.js"></script>
+	<!--fuck github pages not loading my motherfucking shit you cunts-->
 </head>
 
 <body>
@@ -26,18 +35,14 @@
 
 	<div id="user-input">
 		<form>
-		<label for="account"><h3>Whaleshares Account - {{accountNameClean}} </h3> <br>
+			<label for="account">Whaleshares Account - {{accountNameClean}} <br>
   <input type="text" name="Account" v-model="accountName"></label>
     <button v-on:click.prevent="triggerButton" v-bind:disabled="enableFetch" value="penderis">Gimme!</button>
   
-    <div class="hide-shit">
   <button v-on:click.prevent="dbInfo">Database Info</button>
   <button v-on:click.prevent="createDB">Create Local Database</button><br>
   <button v-on:click.prevent="readData">Read Data</button>
-  <button v-on:click.prevent="storeData">Store Data</button>
-  </div>
-  <br>
-  
+  <button v-on:click.prevent="storeData">Store Data</button><br>
 </form>
 <!-- Loader to say we are busy -->
 <!-- <div class="loading-fucker" v-if="walletData.length <= 0"><div></div><div></div><div></div></div> -->
@@ -47,12 +52,6 @@
 </div>
 
 
-    <!-- Load it up bitches -->
-    <script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/7.0.0/pouchdb.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.2.3/js/tabulator.min.js"></script>
-    <script src="js/script.js"></script>
+   
   </body>
 </html>
